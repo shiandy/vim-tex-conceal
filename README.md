@@ -1,4 +1,6 @@
-# tex-conceal.vim
+# vim-tex-conceal
+
+Fork of [tex-conceal.vim](https://github.com/KeitaNakamura/tex-conceal.vim)
 
 This plugin extends the Conceal feature of Vim for LaTeX.
 
@@ -11,18 +13,9 @@ This plugin extends the Conceal feature of Vim for LaTeX.
 ### With conceal and this plugin
 <img src="https://github.com/KeitaNakamura/tex-conceal.vim/blob/master/conceal_plugin.png" width="800">
 
-### Output
-<img src="https://github.com/KeitaNakamura/tex-conceal.vim/blob/master/output.png" width="800">
-
-## Instllation
-```vim:~/.vimrc
-Plugin 'KeitaNakamura/tex-conceal.vim'                 " for Vundle
-or
-Plug   'KeitaNakamura/tex-conceal.vim', {'for': 'tex'} " for VimPlug
-```
 
 ## Recommend settings
 ```vim:~/.vimrc
 set conceallevel=2
-let g:tex_conceal="abdgm"
+let g:tex_conceal="abdgms"
 ```

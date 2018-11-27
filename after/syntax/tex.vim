@@ -35,6 +35,8 @@ if has('conceal')
   syn match texSuperscripts '1' contained conceal cchar=¹
   syn match texSuperscripts '-' contained conceal cchar=⁻
   syn match texSuperscripts 'T' contained conceal cchar=ᵀ
+  syn match texSubscripts '=' contained conceal cchar=₌
+
 
   syn match texMathSymbol '_0' contained conceal cchar=₀
   syn match texMathSymbol '_1' contained conceal cchar=₁
@@ -50,6 +52,7 @@ if has('conceal')
   syn match texMathSymbol '^i' contained conceal cchar=ⁱ
   syn match texMathSymbol '_o' contained conceal cchar=ₒ
   syn match texMathSymbol '^o' contained conceal cchar=ᵒ
+  
 
   " logical symbols
   syn match texMathSymbol '\\lor\>' contained conceal cchar=∨
