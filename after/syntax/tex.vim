@@ -3,19 +3,27 @@
 if has('conceal')
   " More paper specific (what to do with these??)
   syn match texMathSymbol '\\pathspace' contained conceal cchar=Ω
-  syn match texMathSymbol '\\surfaces' contained conceal cchar=𝓜
+  syn match texMathSymbol '\\surfaces'  contained conceal cchar=𝓜
 
   " more reasonably sized symbols that were already defined
   syn match texMathSymbol '\\Rightarrow\>' contained conceal cchar=⇒
-  syn match texMathSymbol '\\Leftarrow\>' contained conceal cchar=⇐
+  syn match texMathSymbol '\\Leftarrow\>'  contained conceal cchar=⇐
   syn match texMathSymbol '\\rightarrow\>' contained conceal cchar=→
-  syn match texMathSymbol '\\leftarrow\>' contained conceal cchar=←
-  syn match texMathSymbol '\\emptyset\>' contained conceal cchar=Ø
-  syn match texMathSymbol '\\varphi\>' contained conceal cchar=φ
-  syn match texMathSymbol '\\phi\>' contained conceal cchar=Φ
-  syn match texMathSymbol '\\langle\>\s*' contained conceal cchar=⟨
-  syn match texMathSymbol '\s*\\rangle\>' contained conceal cchar=⟩
-  syn match texMathSymbol '\\\\' contained conceal cchar=⏎
+  syn match texMathSymbol '\\leftarrow\>'  contained conceal cchar=←
+  syn match texMathSymbol '\\emptyset\>'   contained conceal cchar=Ø
+  syn match texMathSymbol '\\varphi\>'     contained conceal cchar=φ
+  syn match texMathSymbol '\\phi\>'        contained conceal cchar=Φ
+  syn match texMathSymbol '\\langle\>\s*'  contained conceal cchar=⟨
+  syn match texMathSymbol '\s*\\rangle\>'  contained conceal cchar=⟩
+  syn match texMathSymbol '\\\\' contained conceal
+
+  " Include space after greek letters:
+  syn match texMathSymbol '\\Delta\> ' contained conceal cchar=Δ
+
+  " Use regular greek letters when subscript/superscript not available:
+  syn match texSubscripts '\\mu\>'         contained conceal cchar=μ
+  syn match texSuperscripts '\\mu\>'       contained conceal cchar=μ
+  syn match texSuperscripts '\\rho\>'      contained conceal cchar=ᵖ
 
   " Simple number super/sub-scripts
   syn match texMathSymbol '\^0' contained conceal cchar=⁰
@@ -28,14 +36,18 @@ if has('conceal')
   syn match texMathSymbol '\^7' contained conceal cchar=⁷
   syn match texMathSymbol '\^8' contained conceal cchar=⁸
   syn match texMathSymbol '\^9' contained conceal cchar=⁹
+  syn match texMathSymbol '^o'  contained conceal cchar=ᵒ
 
-  syn match texMathSymbol '\^{-1}' contained conceal contains=texSuperscripts
-  syn match texMathSymbol '\^\\mathrm{T}' contained conceal contains=texSuperscripts
+  syn match texMathSymbol '\^{-1}'         contained conceal contains=texSuperscripts
+  syn match texMathSymbol '\^\\mathrm{T}'  contained conceal contains=texSuperscripts
   syn match texMathSymbol '\^\\mathrm{-T}' contained conceal contains=texSuperscripts
-  syn match texSuperscripts '1' contained conceal cchar=¹
-  syn match texSuperscripts '-' contained conceal cchar=⁻
-  syn match texSuperscripts 'T' contained conceal cchar=ᵀ
-  syn match texSubscripts '=' contained conceal cchar=₌
+  syn match texSuperscripts '1'            contained conceal cchar=¹
+  syn match texSuperscripts '-'            contained conceal cchar=⁻
+  syn match texSuperscripts 'T'            contained conceal cchar=ᵀ
+  syn match texSubscripts '='              contained conceal cchar=₌
+  syn match texSubscripts ','              contained conceal cchar=,
+  syn match texSubscripts '\\nu\>'         contained conceal cchar=ᵥ
+  syn match texSuperscripts '\\nu\>'       contained conceal cchar=ᵛ
 
 
   syn match texMathSymbol '_0' contained conceal cchar=₀
@@ -51,14 +63,13 @@ if has('conceal')
   syn match texMathSymbol '_i' contained conceal cchar=ᵢ
   syn match texMathSymbol '^i' contained conceal cchar=ⁱ
   syn match texMathSymbol '_o' contained conceal cchar=ₒ
-  syn match texMathSymbol '^o' contained conceal cchar=ᵒ
-  
+
 
   " logical symbols
-  syn match texMathSymbol '\\lor\>' contained conceal cchar=∨
-  syn match texMathSymbol '\\land\>' contained conceal cchar=∧
-  syn match texMathSymbol '\\lnot\>' contained conceal cchar=¬
-  syn match texMathSymbol '\\implies\>' contained conceal cchar=⇒
+  syn match texMathSymbol '\\lor\>'      contained conceal cchar=∨
+  syn match texMathSymbol '\\land\>'     contained conceal cchar=∧
+  syn match texMathSymbol '\\lnot\>'     contained conceal cchar=¬
+  syn match texMathSymbol '\\implies\>'  contained conceal cchar=⇒
   syn match texMathSymbol '\\geqslant\>' contained conceal cchar=⩾
   syn match texMathSymbol '\\leqslant\>' contained conceal cchar=⩽
 
@@ -173,22 +184,22 @@ if has('conceal')
   syn match texMathSymbol '\\mathscr{Y}' contained conceal cchar=𝓨
   syn match texMathSymbol '\\mathscr{Z}' contained conceal cchar=𝓩
 
-  syn match texStatement '``' contained conceal cchar=“
-  syn match texStatement '\'\'' contained conceal cchar=”
-  syn match texStatement '\\item\>' contained conceal cchar=•
-  syn match texMathSymbol '\\dd' contained conceal cchar=d
-  syn match texDelimiter '\\{' contained conceal cchar={
-  syn match texDelimiter '\\}' contained conceal cchar=}
+  syn match texStatement '``'            contained conceal cchar=“
+  syn match texStatement '\'\''          contained conceal cchar=”
+  syn match texStatement '\\item\>'      contained conceal cchar=•
+  syn match texMathSymbol '\\dd'         contained conceal cchar=d
+  syn match texDelimiter '\\{'           contained conceal cchar={
+  syn match texDelimiter '\\}'           contained conceal cchar=}
   syn match texMathSymbol '\\setminus\>' contained conceal cchar=\
   syn match texMathSymbol '\\coloneqq\>' contained conceal cchar=≔
-  syn match texMathSymbol '\\,' contained conceal cchar= 
-  syn match texMathSymbol '\\ ' contained conceal cchar= 
-  syn match texMathSymbol '\\quad' contained conceal cchar= 
-  syn match texMathSymbol '\\sqrt' contained conceal cchar=√
-  syn match texMathSymbol '\\where\>' contained conceal cchar=|
-  syn match texMathSymbol '\\\!' contained conceal
-  "syn match texStatement '\\\[' contained conceal cchar=⟦
-  "syn match texStatement '\\\]' contained conceal cchar=⟧
+  syn match texMathSymbol '\\,'          contained conceal
+  syn match texMathSymbol '\\ '          contained conceal
+  syn match texMathSymbol '\\quad'       contained conceal
+  syn match texMathSymbol '\\sqrt'       contained conceal cchar=√
+  syn match texMathSymbol '\\where\>'    contained conceal cchar=|
+  syn match texMathSymbol '\\\!'         contained conceal
+  "syn match texStatement '\\\['          contained conceal cchar=⟦
+  "syn match texStatement '\\\]'          contained conceal cchar=⟧
 
   " hide \text delimiter etc inside math mode
   if !exists("g:tex_nospell") || !g:tex_nospell
