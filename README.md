@@ -4,14 +4,33 @@ Fork of [tex-conceal.vim](https://github.com/KeitaNakamura/tex-conceal.vim)
 
 This plugin extends the Conceal feature of Vim for LaTeX.
 
-### Without conceal
-<img src="https://github.com/KeitaNakamura/tex-conceal.vim/blob/master/normal.png" width="800">
+To install, you can use e.g.
+[Vundle](https://github.com/VundleVim/Vundle.vim) with
 
-### With conceal
-<img src="https://github.com/KeitaNakamura/tex-conceal.vim/blob/master/conceal.png" width="800">
+    Plugin 'shiandy/vim-tex-conceal'
 
-### With conceal and this plugin
-<img src="https://github.com/KeitaNakamura/tex-conceal.vim/blob/master/conceal_plugin.png" width="800">
+# How to use
+
+1. Use the macros defined in the `macros.tex` file to typeset your
+   LaTeX file.
+2. When this plugin is active, vim will replace the tex code with the
+   appropriate symbol. We defined more symbols to replace more tex code
+   that was defined via our macros.
+
+
+# Results
+
+## Without conceal
+
+![](img/no_conceal.png)
+
+## With conceal
+
+![](img/with_conceal_orig.png)
+
+## With conceal and this plugin
+
+![](img/with_conceal_mod.png)
 
 
 ## Recommend settings

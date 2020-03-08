@@ -252,8 +252,8 @@ if has('conceal')
   syn match texMathSymbol '\\sqrt'       contained conceal cchar=√
   syn match texMathSymbol '\\where\>'    contained conceal cchar=|
   syn match texMathSymbol '\\\!'         contained conceal
-  syn match textMathSymbol '\\gtrsim\>'    contained conceal cchar=≳
-  syn match textMathSymbol '\\lesssim\>'    contained conceal cchar=≲
+  syn match texMathSymbol '\\gtrsim\>'    contained conceal cchar=≳
+  syn match texMathSymbol '\\lesssim\>'    contained conceal cchar=≲
   "syn match texStatement '\\\['          contained conceal cchar=⟦
   "syn match texStatement '\\\]'          contained conceal cchar=⟧
 
