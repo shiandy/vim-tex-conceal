@@ -26,11 +26,11 @@ To install, you can use e.g.
 
 ## With conceal
 
-![](img/with_conceal_orig.png)
+![](img/with_conceal_only.png)
 
 ## With conceal and this plugin
 
-![](img/with_conceal_mod.png)
+![](img/with_conceal_plugin.png)
 
 
 ## Recommend settings
