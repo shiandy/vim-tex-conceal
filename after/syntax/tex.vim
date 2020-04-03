@@ -12,7 +12,7 @@ if has('conceal')
   syn match texMathSymbol '\\leftarrow\>'  contained conceal cchar=←
   syn match texMathSymbol '\\emptyset\>'   contained conceal cchar=Ø
   syn match texMathSymbol '\\varphi\>'     contained conceal cchar=φ
-  syn match texMathSymbol '\\phi\>'        contained conceal cchar=Φ
+  syn match texMathSymbol '\\phi\>'        contained conceal cchar=ϕ
   syn match texMathSymbol '\\langle\>\s*'  contained conceal cchar=⟨
   syn match texMathSymbol '\s*\\rangle\>'  contained conceal cchar=⟩
   syn match texMathSymbol '\\\\' contained conceal
